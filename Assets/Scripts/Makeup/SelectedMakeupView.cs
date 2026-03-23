@@ -19,12 +19,12 @@ namespace Makeup
         {
             if (Makeup.Selection != Makeup.MinIndex)
             {
-                Image.sprite = Sprites[Makeup.Current];
+                Image.sprite = Sprites[Makeup.Selection];
                 Image.color = _isVisible ? VisibleColor : InvisibleColor;
             }
             else
             {
-                Image.color = _isVisible && DefaultSprite is not null ? VisibleColor : InvisibleColor;
+                Image.color = _isVisible && DefaultSprite ? VisibleColor : InvisibleColor;
                 Image.sprite = DefaultSprite;
             }
         }

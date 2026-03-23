@@ -20,7 +20,7 @@ namespace Makeup
             }
             else
             {
-                Image.color = DefaultSprite is not null ? VisibleColor : InvisibleColor;
+                Image.color = DefaultSprite ? VisibleColor : InvisibleColor;
                 Image.sprite = DefaultSprite;
             }
         }
