@@ -4,7 +4,7 @@ namespace Makeup
 {
     internal class Makeup
     {
-        private const int MinIndex = -1;
+        public const int MinIndex = -1;
         
         public Makeup(MakeupType type) =>
             Type = type;
