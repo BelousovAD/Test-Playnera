@@ -64,18 +64,17 @@ namespace Animation
 
             DOTween.Sequence()
                 .AppendCallback(() => CanvasGroup.interactable = false)
-                .Append(_hand.DOMove(_target.position, 1f))
-                .Append(_hand.DOMove(_leftTarget.position, 1f))
-                .Append(_hand.DOMove(_rightTarget.position, 1f))
-                .Append(_hand.DOMove(_leftTarget.position, 1f))
-                .Append(_hand.DOMove(_rightTarget.position, 1f))
+                .Append(_hand.DOMove(_leftTarget.position, 0.4f))
+                .Append(_hand.DOMove(_rightTarget.position, 0.4f))
+                .Append(_hand.DOMove(_leftTarget.position, 0.4f))
+                .Append(_hand.DOMove(_rightTarget.position, 0.4f))
                 .AppendCallback(() => _makeup.Apply())
-                .Append(_hand.DOMove(_toolParent.position, 1f))
+                .Append(_hand.DOMove(_toolParent.position, 0.6f))
                 .AppendCallback(DropTool)
-                .Append(_hand.DOMove(_handDefaultPosition, 1f))
+                .Append(_hand.DOMove(_handDefaultPosition, 0.4f))
                 .AppendCallback(() => CanvasGroup.interactable = true)
-                .Insert(2f, _selectedMakeup.DOFade(1f, 3f))
-                .Insert(2f, _currentMakeup.DOFade(0f, 3f));
+                .Insert(0.4f, _selectedMakeup.DOFade(1f, 1.2f))
+                .Insert(0.4f, _currentMakeup.DOFade(0f, 1.2f));
         }
 
         private void DropTool()
@@ -93,11 +92,11 @@ namespace Animation
 
             DOTween.Sequence()
                 .AppendCallback(() => CanvasGroup.interactable = false)
-                .Append(_hand.DOMove(_tool.position, 1f))
+                .Append(_hand.DOMove(_tool.position, 0.4f))
                 .AppendCallback(TakeTool)
-                .Append(_hand.DOMove(_colors[_makeup.Selection].position, 1f))
-                .Append(_toolColor.DOFade(1f, 1f))
-                .Append(_hand.DOMove((_target.position - _colors[_makeup.Selection].position) / 2, 1f).SetRelative())
+                .Append(_hand.DOMove(_colors[_makeup.Selection].position, 0.4f))
+                .Append(_toolColor.DOFade(1f, 0.4f))
+                .Append(_hand.DOMove((_target.position - _colors[_makeup.Selection].position) / 2, 0.6f).SetRelative())
                 .AppendCallback(() => CanvasGroup.interactable = true);
         }
 
