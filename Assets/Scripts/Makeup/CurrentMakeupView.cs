@@ -13,16 +13,8 @@ namespace Makeup
 
         private void UpdateView()
         {
-            if (Makeup.Current != Makeup.MinIndex)
-            {
-                Image.sprite = Sprites[Makeup.Current];
-                Image.color = VisibleColor;
-            }
-            else
-            {
-                Image.color = DefaultSprite ? VisibleColor : InvisibleColor;
-                Image.sprite = DefaultSprite;
-            }
+            Image.sprite = Makeup.Current != Makeup.MinIndex ? Sprites[Makeup.Current] : DefaultSprite;
+            Image.color = Image.sprite ? VisibleColor : InvisibleColor;
         }
     }
 }
