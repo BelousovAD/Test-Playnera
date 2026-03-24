@@ -2,7 +2,7 @@ using System;
 
 namespace Makeup
 {
-    internal class Makeup
+    public class Makeup
     {
         public const int MinIndex = -1;
         

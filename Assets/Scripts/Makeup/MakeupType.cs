@@ -1,6 +1,6 @@
 namespace Makeup
 {
-    internal enum MakeupType
+    public enum MakeupType
     {
         Blush = 0,
         Cream = 1,

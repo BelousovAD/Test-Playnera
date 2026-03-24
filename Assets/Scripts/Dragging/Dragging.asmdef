@@ -1,0 +1,16 @@
+{
+    "name": "Dragging",
+    "rootNamespace": "",
+    "references": [
+        "GUID:187b5012e099d4347b640bb7b67a0153"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
