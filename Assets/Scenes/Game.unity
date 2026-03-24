@@ -3106,6 +3106,7 @@ GameObject:
   - component: {fileID: 599495038}
   - component: {fileID: 599495040}
   - component: {fileID: 599495039}
+  - component: {fileID: 599495041}
   m_Layer: 5
   m_Name: SpongeButton
   m_TagString: Untagged
@@ -3191,6 +3192,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 0.9702602
+--- !u!114 &599495041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599495037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f16b5477f84d4ea8c2a254397df882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &625163232
 GameObject:
   m_ObjectHideFlags: 0

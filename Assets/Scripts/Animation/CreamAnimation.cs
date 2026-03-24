@@ -38,12 +38,8 @@ namespace Animation
             }
         }
 
-        private void Awake()
-        {
-            _toolParent = _color;
+        private void Awake() =>
             _handDefaultPosition = _hand.position;
-            _tool = _toolParent.GetChild(0) as RectTransform;
-        }
 
         private void OnEnable()
         {
@@ -89,9 +85,12 @@ namespace Animation
                 return;
             }
 
+            _toolParent = _color.GetChild(0);
+            _tool = _toolParent.GetChild(0) as RectTransform;
+
             DOTween.Sequence()
                 .AppendCallback(() => CanvasGroup.interactable = false)
-                .Append(_hand.DOMove(_tool.position, 1f))
+                .Append(_hand.DOMove(_tool!.position, 1f))
                 .AppendCallback(TakeTool)
                 .Append(_hand.DOMove((_target.position - _toolParent.position) / 2, 1f).SetRelative())
                 .AppendCallback(() => CanvasGroup.interactable = true);
